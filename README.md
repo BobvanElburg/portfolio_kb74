@@ -41,6 +41,7 @@ Ik zal hierbij aan het einde van de week de belangrijkste gebeurtenissen verzame
 # Het portfolio
 
 ***
+
 ## Week 1
 ###### 28-08-2017
 
@@ -52,47 +53,93 @@ Het in kaart brengen van gebruikte technologieën zoals camera’s en sensoren. 
 Ook zijn wij naar Delft geweest om het gebied te verkennen en om camerabeelden vast te leggen van bijzondere situaties die kunnen voorkomen. Dit is belangrijk aangezien de auto op dit soort situaties foutloos moet reageren
 
 ### Presentatie:
-Ik heb samen met Nektarios de presentatie van deze week voorbereid en uitgevoerd.
+Ik heb samen met Nektarios de [presentatie](presentaties/week_1.pdf) van deze week voorbereid en uitgevoerd.
+
+#### Issues: 2
 
 ***
+
 ## Week 2
 ###### 04-09-2017
-- TODO
+
+### Implementatie onderzoek:
+Deze week hebben we verschillende projecten met eigen algoritmes (vertakkingen van SLAM (Simultaneous Localisation and Mapping) onderzocht.
+Criteria opgesteld waar de algortimes aan moeten voldoen.
+Mogelijke kandidaten geselecteerd waar wij verder mee gaan experimenteren.
+Uiteindelijke kandidaten:
+* ORB-SLAM2 
+* SVO
+
+### Implementatie:
+Geselecteerde kandidaten (ORB-SLAM2, SVO) zijn geïnstalleerd
+Niet altijd makkelijk; projecten zijn vaak incompleet
+Weinig documentatie; Trial-and-error
 
 ### Presentatie:
-Ik heb samen met Nektarios de presentatie van deze week voorbereid en uitgevoerd.
+Ik heb samen met Nektarios de [presentatie](presentaties/week_2.pdf) van deze week voorbereid en uitgevoerd.
+
+#### Issues: 22, 31, 38
 
 *** 
+
 ## Week 3
 ###### 11-09-2017
-- TODO
+
+### Camera Selectie:
+Samen met jeroen heb ik gezocht naar de juiste camera voor het het gebruik met stereo-SLAM, uitgekomen op de ZED van stereolabs
+
+### Camera calibratie:
+Ik heb de camera calibratie binnen ROS werkend gemaakt, dit maakt het mogelijk elke (stereo) camera te calibreren.
+
+#### Issues: 35
 
 ***
+
 ## Week 4
 ###### 18-09-2017
 
-- TODO
-### Presentatie:
-In verband met ziekte heb ik samen met Kevin de presentatie van deze week uitgevoerd.
+### ORB-SLAM2 geïnstalleerd op de Jupyterhub. 
+Eigen dataset gemaakt (Slinger). (meerder malen rondgelopen en gefilmd, eerste filmpje was onstabiel)
+Kalibratie van een camera. (met camera calibrator is de camera gekalibreerd aan de hand van een schaakboord. Die een output bestand geeft met de juiste kalibratie settings die gebruikt kunnen worden in de ORB-SLAM2 open source)
+Pointcloud opslaan (gelukt met bijgeleverde example)
 
+
+### Stereo camera hack:
+In deze week ben ik vooral bezig geweest met het maken van en setup voorzien van 2 losse webcams, welke door middel van ROS (Robot Operating System) i.s.m. usb_cam stereo beelden konden opnemen (te zien in de onderstaande afbeelding). Hoewel het experiment redelijk geslaagd was, was het niet mogelijk deze beelden om te zetten in een accurate pointcloud in ORB-slam.
+
+![Camera set-up](images/camera_setup.jpg "Camera set-up")
+
+### Presentatie:
+In verband met ziekte heb ik samen met Kevin de [presentatie](presentaties/week_4.pdf) van deze week uitgevoerd.
+
+#### Issues: 53, 44
 
 ***
+
 ## Week 5
 ###### 25-09-2017
 
-- TODO
+Veel losse werkzaamheden uitgevoerd, druk bezig geweest met Coursera.
+ORB-SLAM 2 code gedocumenteerd
+Begonnen met verkenning object recogntition
+
 ### Presentatie:
-In verband met ziekte heb ik samen met Daniello de presentatie van deze week uitgevoerd.
+In verband met ziekte heb ik samen met Daniello de [presentatie](presentaties/week_5.pdf) van deze week uitgevoerd.
+
+#### Issues: 55, 59
 
 ***
 ## Week 6
 ###### 02-10-2017
 
-- TODO
+#### Issues: 65
 
 ***
+
 ## Week 7
 - TODO
+
+#### Issues: 73
 
 ***
 ## Week 8
