@@ -107,7 +107,7 @@ Pointcloud opslaan (gelukt met bijgeleverde example)
 ### Stereo camera hack:
 In deze week ben ik vooral bezig geweest met het maken van en setup voorzien van 2 losse webcams, welke door middel van ROS (Robot Operating System) i.s.m. usb_cam stereo beelden konden opnemen (te zien in de onderstaande afbeelding). Hoewel het experiment redelijk geslaagd was, was het niet mogelijk deze beelden om te zetten in een accurate pointcloud in ORB-slam.
 
-![Camera set-up](images/camera_setup.jpg "Camera set-up")
+![Camera set-up](images/camera_setup.svg "Camera set-up")
 
 ### Presentatie:
 In verband met ziekte heb ik samen met Kevin de [presentatie](presentaties/week_4.pdf) van deze week uitgevoerd.
