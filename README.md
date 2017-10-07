@@ -123,14 +123,26 @@ Veel losse werkzaamheden uitgevoerd, druk bezig geweest met Coursera.
 ORB-SLAM 2 code gedocumenteerd
 Begonnen met verkenning object recogntition
 
+### Testen YOLO:
+Gedurende deze week ben ik tussen de bedrijven door druk bezig geweest met het eigen maken van de YOLO software. Deze software is zeer slecht gedocumenteerd, uit veel papers blijkt echter wel dat YOLO een van de beste kandidaten is op het gebied van real-time object detection en classification. Na een korte orientatie legde ik de focus op 2 kandidaten: Tiny-YOLO && YOLO9000.
+Na enige tests kwam ik tot de conclussie dat de accuraatheid van beide smaakjes voor ons doeleinde voldoende is. Omdat Tiny-YOLO veel 'lichter' is ligt de verdere focus op Tiny-YOLO.
+Ook is uit onderzoek gebleken dat op vierkante afbeeldingen de detectie veel beter en sneller verloopt.
+De resultaten van de tests zijn te vinden in de map [testcases_yolo](testcases_yolo/). 
+
 ### Presentatie:
 In verband met ziekte heb ik samen met Daniello de [presentatie](presentaties/week_5.pdf) van deze week uitgevoerd.
 
 #### Issues: 55, 59
 
 ***
+
 ## Week 6
 ###### 02-10-2017
+
+### Sequence van afbeeldingen:
+Ik heb mij bezig gehouden met het bulk inladen van images in de tiny yolo omgeving. Ik heb hierbij gebruik gemaakt van de bestaande hooks uit darknet.py. Hierdoor heb ik door middel van een python script interactie met de C++ core van YOLO en is het mogelijk eenvoudig een bulk afbeeldingen te verwerken. Tevens heb ik een uitbreding gemaakt die zelf de zogenaamde 'bounding boxes' om de herkende objecten heen tekent, tevens wordt deze informatie plain text in een JSON opgeslagen.
+Hieronder staat een geanimeerde afbeelding van een reeks van 200 achtereenvolgende foto's welke zij bewerkt door middel van mijn script.
+![0-200_sequence.gif](images/0-200_sequence.gif "Sequence gif")
 
 #### Issues: 65
 
