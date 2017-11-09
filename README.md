@@ -3,14 +3,14 @@
 </head>
 
 # Welkom!
-Op mijn Github-Pages site ter behoeve van het vastleggen van mijn portfolio. 
+Op mijn Github-Pages site ter behoeve van het vastleggen van mijn portfolio.
 Ik zal deze site gedurende de loop van het blok KB-74: Applied data science, opbouwen.
-Dit portfolio zal dienen als een naslagwerk van mijn uitgevoerde werkzaamheden gedurende 'KB-74', 
+Dit portfolio zal dienen als een naslagwerk van mijn uitgevoerde werkzaamheden gedurende 'KB-74',
 waar ik deel heb uitgemaakt van het project *Urbinn*.
 
 
 ## Urbinn?
-URBINN, afkorting van URBan INNovations is een LearningLab rondom autonoom rijdend vervoer binnen stedelijke gebieden. 
+URBINN, afkorting van URBan INNovations is een LearningLab rondom autonoom rijdend vervoer binnen stedelijke gebieden.
 Binnen URBINN wordt een autonoom rijdend voertuig ontwikkeld dat als basis zal dienen voor onderzoek naar autonoom rijde en de toepassing daarvan binnen een stedelijk gebied. De ontwikkeling hiervan is opgedeeld in meerdere minoren:
 * **Applied data science**
 * Embedded systems
@@ -19,7 +19,7 @@ Binnen URBINN wordt een autonoom rijdend voertuig ontwikkeld dat als basis zal d
 * Robotics and vision design
 * Serious gaming
 
-Alle bovengenoemde minoren vallen  onder het Lectoraat Smart Sensor Systems. De ontwikkeling van het voertuig wordt geheel gecoördineerd en gefaciliteerd binnen de Betafactory, te Delft. 
+Alle bovengenoemde minoren vallen  onder het Lectoraat Smart Sensor Systems. De ontwikkeling van het voertuig wordt geheel gecoördineerd en gefaciliteerd binnen de Betafactory, te Delft.
 
 ## Wat valt er te vinden in dit portfolio?
 De volgende items zullen in ieder geval naar voren komen in mijn portfolio:
@@ -31,7 +31,7 @@ De volgende items zullen in ieder geval naar voren komen in mijn portfolio:
 * De opdrachten van de bezochte workshops
 
 Verder zal dit lijstje aangevuld worden met:
-opgeleverde producten, eigen experimenten, testen, producten, etc. 
+opgeleverde producten, eigen experimenten, testen, producten, etc.
 
 ## Hoe ga ik dit doen?
 Vanwege de incrementele aard van dit portfolio en het overzicht wat daarbij ge*paard* gaat, heb ik ervoor gekozen om per week het portfolio aan te vullen.
@@ -53,19 +53,19 @@ id  | Beschrijving
  35 | Ik heb de camera calibratie binnen ROS werkend gemaakt, dit maakt het mogelijk elke (stereo) camera te calibreren.
  38 | Zelf een testopstelling gemaakt met twee webcams om als stereo camera footage te gebruiken, zie meer bij 'Stereo camera hack'.
  44 | Geholpen met de installatie van ORB2 SLAM op de datascience server.
- 53 | ORB2 installatie in een eigen repository gestopt. 
- 55 | Onderzoek gedaan naar object detection papers, de ze papers zijn hier te vinden ## TODO ##
+ 53 | ORB2 installatie in een eigen repository gestopt.
+ 55 | Onderzoek gedaan naar object detection papers.
  59 | Documenteren van de data structuur van 'Map' binnen ORB2
  65 | Yolo uitproberen op KITTI, Uit veel papers blijkt echter wel dat YOLO een van de beste kandidaten is op het gebied van real-time object detection en classification. Na een korte orientatie legde ik de focus op 2 kandidaten: Tiny-YOLO && YOLO9000. Na enige tests kwam ik tot de conclussie dat de accuraatheid van beide smaakjes voor ons doeleinde voldoende is. Omdat Tiny-YOLO veel 'lichter' is ligt de verdere focus op Tiny-YOLO. Ook is uit onderzoek gebleken dat op vierkante afbeeldingen de detectie veel beter en sneller verloopt, dus heb ik de afbeeldngen ook opgeknipt in vierkantjes. De resultaten van de tests zijn te vinden in de map [testcases_yolo](testcases_yolo/).
- 73 | Ik heb mij bezig gehouden met het bulk inladen van images in de tiny yolo omgeving. Ik heb hierbij gebruik gemaakt van de bestaande hooks uit darknet.py. Hierdoor heb ik door middel van een python script interactie met de C++ core van YOLO en is het mogelijk eenvoudig een bulk afbeeldingen te verwerken. Tevens heb ik een uitbreding gemaakt die zelf de zogenaamde 'bounding boxes' om de herkende objecten heen tekent. ## TODO SCript toevoegen ##
- 74 | Van de dataset van ticket #73 is een Zogenaamde 'ground truth' bekend, dit zijn afbeeldingen die door mensen voorzien zijn van labels op de plaatsen waar objecten staan om de grote dataset van kitte 7000+ foto's te controlleren heb ik een script ## TODO ##  geschreven die op basis van de Intersection Over Union de false positives van TinyYolo bepaald. De uitkomst was 0.14% false positives met een IOU van >50%
- 76 | [Repository]( www.github.com/urbinn/yolo) ingericht met daarin YOLO zodat dit eenvoudig uitgerold kan worden. 
- 83 | Klassen vastgesteld welke we in onze eigen trainings dataset willen hebben, zodat we YOLO kunnen trainen op het herkennen van deze klassen 
+ 73 | Ik heb mij bezig gehouden met het bulk inladen van images in de tiny yolo omgeving. Ik heb hierbij gebruik gemaakt van de bestaande hooks uit darknet.py. Hierdoor heb ik door middel van een [python script](scripts/Run_yolo.md) interactie met de C++ core van YOLO en is het mogelijk eenvoudig een bulk afbeeldingen te verwerken. Tevens heb ik een uitbreding gemaakt die zelf de zogenaamde 'bounding boxes' om de herkende objecten heen tekent.
+ 74 | Van de dataset van ticket #73 is een Zogenaamde 'ground truth' bekend, dit zijn afbeeldingen die door mensen voorzien zijn van labels op de plaatsen waar objecten staan om de grote dataset van kitte 7000+ foto's te controlleren heb ik een [python script](scripts/Validation_IOU_kitti.md)  geschreven die op basis van de Intersection Over Union de false positives van TinyYolo bepaald. De uitkomst was 0.14% false positives met een IOU van >50%
+ 76 | [Repository](https://github.com/urbinn/yolo) ingericht met daarin YOLO zodat dit eenvoudig uitgerold kan worden.
+ 83 | Klassen vastgesteld welke we in onze eigen trainings dataset willen hebben, zodat we YOLO kunnen trainen op het herkennen van deze klassen
  90 | Samen met Nektarios met de nieuwe ZED Stereocamera beelden geschoten in slinger zodat deze gebruikt kunnen worden voor het evalueren van ORB SLAM
- 92 | Calibratie uitgevoerd van de nieuwe camera 
+ 92 | Calibratie uitgevoerd van de nieuwe camera
  93 | Samen met Jeroen en Kevin gewerkt aan een werkende training configuratie van Darknet en YOLO dit om te kijken of we zelf een yolo instantie konden trainen, dit bleek moeilijk maar succesvol
- 94 | 
-
+ 96 | Om de oorzaak van problemen met de locatie van de getekende boundingboxes te achterhalen heb ik de output van  alle daarme in aaraking komende scripts gevalideerd.
+ 97 | Met het script uit ticket 74 heb ik de output van yolo welke gedraaid heeft op door onzelf getrainde weights gevalideerd.
 
 ## Presentaties:
 ###### Te vinden in [presenaties](presentaties/)
@@ -79,31 +79,38 @@ id  | Beschrijving
 
 ## Scripts:
 ###### Te vinden in [scripts](scripts/)
- Script  | Beschrijving
+Script    | Beschrijving
 ------------- | -----------------------------------------------------------------------------------
-[Week 1](script/) | 
-[Week 2](script/) | 
-[Week 4](script/) | 
-[Week 5](script/) | 
+[Run_yolo.py](scripts/Run_yolo.md) | Python script die door middel van hooks in yolo/darknet reeksen foto's verwerken automatiseert
+[Validation_IOU_kitti.py](scripts/Validation_IOU_kitti.md) | Python script die de output van yolo kan valideren tegen de Groundtruth van de Kitti dataset, hij doet dit op basis van Intersection Over Union (IOU)
+[bbox_to_yolo.py](scripts/bbox_to_yolo.md) | Python script die de output van de bbox tool omzet naar Yolo labels, tevens te vinden in de [BBox-Label-Tool](https://github.com/urbinn/BBox-Label-Tool) Repository.
+
+
+## Repositories:
+###### verschillende Repositories van [Urbinn](https://github.com/urbinn/) waaraan ik heb bijgedragen. Voor toegang graag contact opnemen met @jeroenvuurens.
+  Repository  | Beschrijving
+------------- | -----------------------------------------------------------------------------------
+[BBox-Label-Tool](https://github.com/urbinn/BBox-Label-Tool) | Bestaande label tool welke door mij en Nektarios aangepast is om meerdere klasses te kunnen verwerken. Tevens zijn er meerdre bugfixes uitgevoerd en is de gebruiksvriendelijkheid verbeterd.
+[Tiny-YOLO](https://github.com/urbinn/yolo/) | Eigen fork van het YOLO project op basis van darknet.
 
 
 ## Uitgelichte onderwerpen:
 
 ### Stereo camera hack:
-In deze week ben ik vooral bezig geweest met het maken van en setup voorzien van 2 losse webcams, welke door middel van ROS (Robot Operating System) i.s.m. usb_cam stereo beelden konden opnemen (te zien in de onderstaande afbeelding). Hoewel het experiment redelijk geslaagd was, was het niet mogelijk deze beelden om te zetten in een accurate pointcloud in ORB-slam.
+In week ben 4 ik vooral bezig geweest met het maken van en setup voorzien van 2 losse webcams, welke door middel van ROS (Robot Operating System) i.s.m. usb_cam stereo beelden konden opnemen (te zien in de onderstaande afbeelding). Hoewel het experiment redelijk geslaagd was, was het niet mogelijk deze beelden om te zetten in een accurate pointcloud in ORB-slam. Desalniettemin een leuke en vooral leerzame uitstap in het project
 
 ![Camera set-up](images/camera_setup.svg "Camera set-up")
 
 
 ### Testen YOLO varianten:
-De  software is zeer slecht gedocumenteerd, uit veel papers blijkt echter wel dat YOLO een van de beste kandidaten is op het gebied van real-time object detection en classification. Na een korte orientatie legde ik de focus op 2 kandidaten: Tiny-YOLO && YOLO9000.
-Na enige tests kwam ik tot de conclussie dat de accuraatheid van beide smaakjes voor ons doeleinde voldoende is. Omdat Tiny-YOLO veel 'lichter' is ligt de verdere focus op Tiny-YOLO.
-Ook is uit onderzoek gebleken dat op vierkante afbeeldingen de detectie veel beter en sneller verloopt.
-De resultaten van de tests zijn te vinden in de map [testcases_yolo](testcases_yolo/). 
+De YOLO software is zeer slecht gedocumenteerd, uit veel papers blijkt echter wel dat YOLO een van de beste kandidaten is op het gebied van real-time object detection en classification. Na een korte orientatie legde ik de focus op 2 kandidaten: Tiny-YOLO && YOLO9000.
+Na enige tests kwam ik tot de conclussie dat de accuraatheid van beide smaakjes voor ons doeleinde voldoende is. De resultaten van de tests zijn te vinden in de map [testcases_yolo](testcases_yolo/). De gebruikte kandidaat per foto is te herkennen aan de `*_9000` of `*_tiny` in het einde van de naam.
+Omdat Tiny-YOLO veel 'lichter' is ligt de verdere focus op Tiny-YOLO.
+Ook is uit onderzoek gebleken dat op vierkante afbeeldingen de detectie veel beter en sneller verloopt. re resultation hiervan zijn te zien in de mappen [110](testcases_yolo/0000000110/) & [010](testcases_yolo/0000000010/), waarbij afbeeldingen 1 t/m 4 vierkant overlappende afbeeldingen van links naar rechts zijn. deze zijn samengevoegd in een afbeelding te herkennen aan `*_collage` in het einde van de naam.
+De resultaten van alle tests zijn te vinden in de map [testcases_yolo](testcases_yolo/).
 
 
 ### Sequence van afbeeldingen, uitvoer van TinyYOLO:
 Ik heb mij bezig gehouden met het bulk inladen van images in de tiny yolo omgeving. Ik heb hierbij gebruik gemaakt van de bestaande hooks uit darknet.py. Hierdoor heb ik door middel van een python script interactie met de C++ core van YOLO en is het mogelijk eenvoudig een bulk afbeeldingen te verwerken. Tevens heb ik een uitbreding gemaakt die zelf de zogenaamde 'bounding boxes' om de herkende objecten heen tekent, tevens wordt deze informatie plain text in een JSON opgeslagen.
 Hieronder staat een geanimeerde afbeelding van een reeks van 200 achtereenvolgende foto's welke zij bewerkt door middel van mijn script.
 ![0-200_sequence.gif](images/0-200_sequence.gif "Sequence gif")
-
