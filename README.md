@@ -66,6 +66,11 @@ id  | Beschrijving
  93 | Samen met Jeroen en Kevin gewerkt aan een werkende training configuratie van Darknet en YOLO dit om te kijken of we zelf een yolo instantie konden trainen, dit bleek moeilijk maar succesvol
  96 | Om de oorzaak van problemen met de locatie van de getekende boundingboxes te achterhalen heb ik de output van  alle daarme in aaraking komende scripts gevalideerd.
  97 | Met het script uit ticket 74 heb ik de output van yolo welke gedraaid heeft op door onzelf getrainde weights gevalideerd.
+ 98 | Samen met Kevin en Nektarion de configuratie files van yolo beschreven om zo meer kennis en begrip op te doen met YOLO. Tevens was dit voorbereiding op het trainen van ons eigen model
+116 | Evalutatie van de training van YOLO, later overschaduwd door #117
+117 | Evalutatie van de training van YOLO per batch, dit was door Jeroen gevraagd om inzicht te krijgen in de benodigde trainingsduur voor een proof-of-concept model, uitgewerk onder de kop 'Evaluatie zelf getrainde YOLO '
+127 | LAng bezig geweest met het uitzoeken waarom labels niet aan de juiste klassen werden toegekend op de LIACS server, na her-installatie op datascience server werkte alles weer.
+133 | Samen met Viradj met de ZED camera stereo-opnames gemaakt in Delft.
 
 ## Presentaties:
 ###### Te vinden in [presenaties](presentaties/)
@@ -94,12 +99,16 @@ Script    | Beschrijving
 [Tiny-YOLO](https://github.com/urbinn/yolo/) | Eigen fork van het YOLO project op basis van darknet.
 
 
+
+
+
 ## Uitgelichte onderwerpen:
 
 ### Stereo camera hack:
 In week ben 4 ik vooral bezig geweest met het maken van en setup voorzien van 2 losse webcams, welke door middel van ROS (Robot Operating System) i.s.m. usb_cam stereo beelden konden opnemen (te zien in de onderstaande afbeelding). Hoewel het experiment redelijk geslaagd was, was het niet mogelijk deze beelden om te zetten in een accurate pointcloud in ORB-slam. Desalniettemin een leuke en vooral leerzame uitstap in het project
 
 ![Camera set-up](images/camera_setup.svg "Camera set-up")
+
 
 
 ### Testen YOLO varianten:
@@ -110,7 +119,41 @@ Ook is uit onderzoek gebleken dat op vierkante afbeeldingen de detectie veel bet
 De resultaten van alle tests zijn te vinden in de map [testcases_yolo](testcases_yolo/).
 
 
+
 ### Sequence van afbeeldingen, uitvoer van TinyYOLO:
 Ik heb mij bezig gehouden met het bulk inladen van images in de tiny yolo omgeving. Ik heb hierbij gebruik gemaakt van de bestaande hooks uit darknet.py. Hierdoor heb ik door middel van een python script interactie met de C++ core van YOLO en is het mogelijk eenvoudig een bulk afbeeldingen te verwerken. Tevens heb ik een uitbreding gemaakt die zelf de zogenaamde 'bounding boxes' om de herkende objecten heen tekent, tevens wordt deze informatie plain text in een JSON opgeslagen.
 Hieronder staat een geanimeerde afbeelding van een reeks van 200 achtereenvolgende foto's welke zij bewerkt door middel van mijn script.
 ![0-200_sequence.gif](images/0-200_sequence.gif "Sequence gif")
+
+
+
+### Calling Bullsh\*t (in data science).
+Voor de minor hebben we de cursus "Calling bullsh\*t" gevolgd. hiervoor moesten we een [opdracht](docs/calling_bullshit.pdf) maken. Het doel hiervan was verschillende soorten bullshit te verzamelen en te documentren.
+
+
+
+### Evaluatie zelf getrainde YOLO 
+Voordat we konden valideren moest er eerst getrained worden.
+In overleg met de hele groep hebben we 133 klassen gekozen die we willen kunnen herkennen
+Door enkele groepsgenoten zijn uit de dataset van KITTI in +-1700 afbeeldingen objecten voorzien van een omtrek (BoundingBox) en een label, corresponderend aan een van de 133 klassen. Deze deze labels zijn aangebracht met de zelf aangepaste BBOX-labeling-tool. De labels die hieruit kwamen zijn met het [convert.py script](scripts/convert.py) voor YOLO geformateerd. De dataset was nu klaar voor training.
+
+
+ - Yolo training op datascience server gestart d.m.v. een [bash script](scripts/train_ownlabels):
+ - Dit script maakt gebruik van de config files uit de volgende map:
+   `datascience.hhs.nl:/data/urbinn/darknet/own_cfg/`
+ - De output van de training (de weights, opgeslagen per 10.000 verwerkte batches) zijn te vinden in: 
+   `datascience.hhs.nl:/data/urbinn/darknet/kitti_own_labels_0612/`
+ - Deze weights zijn gebruikt als input voor het ['batch_validate' script](scripts/batch_validate.py). Dit script draaide een validatie run voor elke weights file in
+    `datascience.hhs.nl:/data/urbinn/darknet/kitti_own_labels_0612` 
+ - En creerde daarvoor een map met corresponderende naam in:
+    `datascience.hhs.nl:/data/urbinn/darknet/output/batch/`
+ - Elk van deze mappen bevat een 'objects.json'  met daarin per foto de herkende objecten, deze zijn gebruikt als input van [mijn notebook](scripts/Validation_IOU_Batch.md). Dit notebook haalt per 'foto' in objects.json de herkende bounding-boxes op en vergelijkt deze met de gegevens uit de met de hand gelabelde ground truth, te vinden in:
+    `datascience.hhs.nl:/data/urbinn/darknet/gtconverted/`
+    
+    
+Om het zelfgetrainde model te evalueren heb ik enkele visualisaties gemaakt.
+de eerste visualisatie laat de de succesvol herkende objecten gezien voor elke weight file. Hieruit val op te maken dat je maar 30/40 duizend batches nodig hebt om een model ver genoeg te trainen om te kijken of het de goede kant op gaat.
+![detects_by_batch.png](images/detects_by_batch.png "detects_by_batch.png")
+
+Uit eerdere studies bleek dat het vaak enkele klassen zijn die niet voldoende herkend worden, deze hebben dan meer trainingsmateriaal nodig. Om dit te visualieren heb ik van batch 250.000 de detectie per klasse laten plotten:
+![detects_by_class.png](images/detects_by_class.png "detects_by_class.png")
