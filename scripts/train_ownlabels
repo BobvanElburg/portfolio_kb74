@@ -1,0 +1,1 @@
+./darknet detector train own_cfg/data.data own_cfg/config.cfg kitti_own_labels_0612/config_250000.weights -gpus 0,1,2,3
