@@ -82,7 +82,7 @@ id  | Beschrijving
 [Week 5](presentaties/week_5.pdf) | In verband met ziekte heb ik samen met Daniello de presentatie van deze week uitgevoerd.
 
 
-## Scripts:
+## Notebook scripts:
 ###### Te vinden in [scripts](scripts/)
 Script    | Beschrijving
 ------------- | -----------------------------------------------------------------------------------
@@ -98,6 +98,18 @@ Script    | Beschrijving
 [BBox-Label-Tool](https://github.com/urbinn/BBox-Label-Tool) | Bestaande label tool welke door mij en Nektarios aangepast is om meerdere klasses te kunnen verwerken. Tevens zijn er meerdre bugfixes uitgevoerd en is de gebruiksvriendelijkheid verbeterd.
 [Tiny-YOLO](https://github.com/urbinn/yolo/) | Eigen fork van het YOLO project op basis van darknet.
 
+
+## Coursera 'machine learning' :
+###### Tijdens de minor heb ik de benodigde delen van de coursera cursus 'machine learning' afgerond, hieronder de resultaten.
+![coursera_complete.jpg](images/coursera_complete.jpg "coursera_complete.jpg")
+
+
+## Datacamp:
+###### Vanwege mijn afdoende kennis m.b.t. Python 3.4+ heb ik deze cursus overgeslagen.
+
+
+## Calling Bullsh\*t (in data science).
+Voor de minor hebben we de cursus "Calling bullsh\*t" gevolgd. hiervoor moesten we een [opdracht](docs/calling_bullshit.pdf) maken. Het doel hiervan was verschillende soorten bullshit te verzamelen en te documentren.
 
 
 
@@ -124,12 +136,6 @@ De resultaten van alle tests zijn te vinden in de map [testcases_yolo](testcases
 Ik heb mij bezig gehouden met het bulk inladen van images in de tiny yolo omgeving. Ik heb hierbij gebruik gemaakt van de bestaande hooks uit darknet.py. Hierdoor heb ik door middel van een python script interactie met de C++ core van YOLO en is het mogelijk eenvoudig een bulk afbeeldingen te verwerken. Tevens heb ik een uitbreding gemaakt die zelf de zogenaamde 'bounding boxes' om de herkende objecten heen tekent, tevens wordt deze informatie plain text in een JSON opgeslagen.
 Hieronder staat een geanimeerde afbeelding van een reeks van 200 achtereenvolgende foto's welke zij bewerkt door middel van mijn script.
 ![0-200_sequence.gif](images/0-200_sequence.gif "Sequence gif")
-
-
-
-### Calling Bullsh\*t (in data science).
-Voor de minor hebben we de cursus "Calling bullsh\*t" gevolgd. hiervoor moesten we een [opdracht](docs/calling_bullshit.pdf) maken. Het doel hiervan was verschillende soorten bullshit te verzamelen en te documentren.
-
 
 
 ### Evaluatie zelf getrainde YOLO 
