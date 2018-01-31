@@ -66,7 +66,7 @@ id  | Beschrijving
  93 | Samen met Jeroen en Kevin gewerkt aan een werkende training configuratie van Darknet en YOLO dit om te kijken of we zelf een yolo instantie konden trainen, dit bleek moeilijk maar succesvol
  96 | Om de oorzaak van problemen met de locatie van de getekende boundingboxes te achterhalen heb ik de output van  alle daarme in aaraking komende scripts gevalideerd.
  97 | Met het script uit ticket 74 heb ik de output van yolo welke gedraaid heeft op door onzelf getrainde weights gevalideerd.
- 98 | Samen met Kevin en Nektarion de configuratie files van yolo beschreven om zo meer kennis en begrip op te doen met YOLO. Tevens was dit voorbereiding op het trainen van ons eigen model
+ 98 | Samen met Kevin en Nektarios de configuratie files van yolo beschreven om zo meer kennis en begrip op te doen met YOLO. Tevens was dit voorbereiding op het trainen van ons eigen model
 116 | Evalutatie van de training van YOLO, later overschaduwd door #117
 117 | Evalutatie van de training van YOLO per batch, dit was door Jeroen gevraagd om inzicht te krijgen in de benodigde trainingsduur voor een proof-of-concept model, uitgewerk onder de kop 'Evaluatie zelf getrainde YOLO '
 127 | LAng bezig geweest met het uitzoeken waarom labels niet aan de juiste klassen werden toegekend op de LIACS server, na her-installatie op datascience server werkte alles weer.
@@ -80,6 +80,8 @@ id  | Beschrijving
 [Week 2](presentaties/week_2.pdf) | Ik heb samen met Nektarios de presentatie van deze week voorbereid en uitgevoerd.
 [Week 4](presentaties/week_4.pdf) | In verband met ziekte heb ik samen met Kevin de presentatie van deze week uitgevoerd.
 [Week 5](presentaties/week_5.pdf) | In verband met ziekte heb ik samen met Daniello de presentatie van deze week uitgevoerd.
+[Week 18](presentaties/week_18.pdf) | In verband met afwezigheid heb ik samen met Jeffrey de presentatie van deze week uitgevoerd.
+[Week 19](presentaties/week_19.pdf) | Ik heb samen met Jeffrey het paper gepresenteerd t.b.v. feedback.
 
 
 ## Notebook scripts:
@@ -99,17 +101,24 @@ Script    | Beschrijving
 [Tiny-YOLO](https://github.com/urbinn/yolo/) | Eigen fork van het YOLO project op basis van darknet.
 
 
-## Coursera 'machine learning' :
-###### Tijdens de minor heb ik de benodigde delen van de coursera cursus 'machine learning' afgerond, hieronder de resultaten.
+## Handelingsdelen
+###### Tijdens deze minor waren er enkele verplichte handelingsdelen, hieronder de resultaten
+
+### Coursera 'machine learning' :
+Tijdens de minor heb ik de benodigde delen van de coursera cursus 'machine learning' afgerond, hieronder de resultaten.
 ![coursera_complete.jpg](images/coursera_complete.jpg "coursera_complete.jpg")
 
+### Datacamp:
+Vanwege mijn afdoende kennis m.b.t. Python 3.4+ en bijbehorende libaries heb ik deze cursus overgeslagen. Wel zijn stukken van mijn python code terug te vinden in de map [scripts](scripts/).
 
-## Datacamp:
-###### Vanwege mijn afdoende kennis m.b.t. Python 3.4+ heb ik deze cursus overgeslagen.
-
-
-## Calling Bullsh\*t (in data science).
+### Calling Bullsh\*t (in data science):
 Voor de minor hebben we de cursus "Calling bullsh\*t" gevolgd. hiervoor moesten we een [opdracht](docs/calling_bullshit.pdf) maken. Het doel hiervan was verschillende soorten bullshit te verzamelen en te documentren.
+
+### Spark:
+Tijdens de minor heb ik een cursus Spark afgerond. Deze cursus bestond uit twee delen, klik hier voor [deel 1](Spark/assignment_1.ipynb) of [deel 2](Spark/assignment_2.ipynb).
+
+### Exploratory data science:
+Tijdens de minor heb ik een cursus Exploratory data science afgerond. Deze cursus bestond uit negen delen, [klik hier voor een overzicht van de opdrachten](Exploratory_data_analysis/).
 
 
 
