@@ -27,15 +27,35 @@ De volgende items zullen in ieder geval naar voren komen in mijn portfolio:
 * Code snippets die ik geschreven heb
 * Screenshots van de online courses die ik doorlopen heb. (DataCamp / Coursera)
 * De tickets die ik opgelost heb.
-* Uitgelichte onderwerpen
+* Uitgelichte onderwerpen (Producten waar ik zelf trots op ben)
 * De opdrachten van de bezochte workshops
 
-Verder zal dit lijstje aangevuld worden met:
-opgeleverde producten, eigen experimenten, testen, producten, etc.
+In de eerste weken van het project ben ik vooral bezig geweest met het onderzoeken en documenteren van bestaande SLAM algoritmes. Ook het locatie onderzoek, en de harware selectie heb ik uitgebreid aan bijgedragen. Dit vooronderzoek was vereist voor begrip van de stof verder in de minor.
 
-## Hoe ga ik dit doen?
-Vanwege de incrementele aard van dit portfolio en het overzicht wat daarbij ge*paard* gaat, heb ik ervoor gekozen om per week het portfolio aan te vullen.
-Ik zal hierbij aan het einde van de week de belangrijkste gebeurtenissen verzamelen en documenteren en onder het kopje van die week in mijn portfolio stoppen
+Snel werdt duidelijk dat voor het creeren van een semantische kaart twee onderdelen nodig waren: Een ruimtelijke kaart en geclasseficeerde objecten binnen deze ruimte. Ik ging mij primair focusen op aanleveren van de geclasificeerde objecten voor de semantische kaart. Voor het genereren van deze kaart is (stereo) video beeld nodig. Om de juistheid van de gegenereerde kaart te controlleren is een zogenaamde 'ground-truth' nodig. Omdat de hardware voor het generen van deze dataset waarchijnlijk nog even op zicht liet wachten, heb ik onderzoek gedaan naar bestaande datasets, de KITTI dataset leek het meest geschikt.
+
+Samen met enkele groepsgenoten heb ik deskstudies uitgevoerd om zo een geschikte kandidaat te selecteren voor Object detectie vanaf afbeeldingen. Het oog viel uiteindelijk op YOLO.
+
+YOLO is een machine learning framework dat op basis van een convolution neural network objecten in afbeeldingen kan herkennen. Dit framework maakt gebruik van de NVidia CUDA API om de vele 'simpele' berekeningen uit te besteden aan videokaarten.
+
+Omdat er leveringsproblemen waren met de server en de videokaart van de minor liep het onderzoek naar YOLO wat vertraging op in deze tijd ben ik verschillende set-ups met stereo camera's gaan testen. 
+
+Tussentijds heb ik toegang verkregen tot de server van de universiteit Leiden, hier heb ik enkele expirimenten met yolo uit kunnen voeren, echter bleven de testen beperkt tot het minimale om zo de overige gebruikers niet te veel te hinderen.
+
+Toen uiteindelijk de GPU werdt geleverd moest deze nog van passende drivers worden voorzien, hier heb ik voor gezorgd. 
+
+Ik heb een groep geleid voor het maken van een eigen trainingset t.b.v. het trainen van YOLO op specifieke objecten.
+
+Met de GPU geleverd kon ik verder gaan met onderzoeken met YOLO de diverse resultaten hiervan zijn te vinden in de uitgelichte onderwerpen.
+
+Er zaten veel kleine fouten in YOLO welke ik er in de loop van de tijd uit heb gehaald dit slokte veel tijd op omdat de documentatie van YOLO praktisch niet aanwezig is.
+
+Een fout welk ik niet binnen de minor er uit kreeg was het (soms) scheef tekenen van de bounding boxes, dit is voor een opvolger om op te lossen.
+
+Richting het einde van de minor ben ik mij minder gaan focusen op YOLO er kwamen al voldoende resultaten uit om te gebruiken voor een proof of concept van de semantische kaart.
+
+Ik heb mij gefocust op het voorbereiden van preentaties en het schrijven van de paper, ook heb ik geholpen met het maken en clusteren van de sematische kaart.
+
 
 ***
 
@@ -69,7 +89,7 @@ id  | Beschrijving
  98 | Samen met Kevin en Nektarios de configuratie files van yolo beschreven om zo meer kennis en begrip op te doen met YOLO. Tevens was dit voorbereiding op het trainen van ons eigen model
 116 | Evalutatie van de training van YOLO, later overschaduwd door #117
 117 | Evalutatie van de training van YOLO per batch, dit was door Jeroen gevraagd om inzicht te krijgen in de benodigde trainingsduur voor een proof-of-concept model, uitgewerk onder de kop 'Evaluatie zelf getrainde YOLO '
-127 | LAng bezig geweest met het uitzoeken waarom labels niet aan de juiste klassen werden toegekend op de LIACS server, na her-installatie op datascience server werkte alles weer.
+127 | Lang bezig geweest met het uitzoeken waarom labels niet aan de juiste klassen werden toegekend op de LIACS server, na her-installatie op datascience server werkte alles weer.
 133 | Samen met Viradj met de ZED camera stereo-opnames gemaakt in Delft.
 
 ## Presentaties:
